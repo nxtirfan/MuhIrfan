@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/tailwind.js"></script>
+    <script src="assets/js/tailwindconfig.js"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+
+            .navbar-fixed {
+                @apply fixed z-[9999] bg-white bg-opacity-70;
+                backdrop-filter: blur(5px);
+                box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)
+            }
+
+            .hamburger-line {
+                @apply w-[30px] h-[2px] my-2 block bg-black;
+            }
+
+            .hamburger-active > span:nth-child(1) {
+                @apply rotate-45;
+            }
+
+            .hamburger-active > span:nth-child(2) {
+                @apply scale-0;
+            }
+
+            .hamburger-active > span:nth-child(3) {
+                @apply -rotate-45;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="assets/img/yuki.png">
+    <title>Home - Irfan</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between lg:justify-around relative">
+                <div class="px-4">
+                    <a href="#home" class="font-bold text-lg text-primary block py-6">Muhammad Irfan</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+                    
+                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#home" class="text-bold text-black py-2 mx-8 flex group-hover:text-primary">Beranda</a>
+                            </li>
+                            <li class="group">
+                                <a href="#about" class="text-bold text-black py-2 mx-8 flex group-hover:text-primary">Tentang Saya</a>
+                            </li>
+                            <li class="group">
+                                <a href="#program" class="text-bold text-black py-2 mx-8 flex group-hover:text-primary">Program</a>
+                            </li>
+                            <li class="group">
+                                <a href="login.php" class="text-bold text-black py-2 mx-8 flex group-hover:text-primary">Log Out</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+   <!-- Hero Section Start -->
+    <section id="home" class="pt-32">
+        <div class="container">
+            <div class="flex flex-wrap justify-around">
+                <div class="pt-20 ">
+                    <h1 class="text-first font-bold text-secondary text-xl">Halo semua nama saya</h1>
+                    <div class="flex flex-nowrap">
+                        <h1 class="p-2 pb-2 shadow-lg text-white text-5xl bg-primary font-bold">M. Irfan Al Hakim</h1>
+                    </div>
+                    <div class="pt-2 flex justify-start pl-2">
+                        <blockquote class="text-4xl font-semibold italic text-start text-black">
+                            Junior Tech Support<br>& Web
+                            <span
+                                class="before:block before:absolute before:-inset-1 before:-skew-y-2 before:bg-primary relative inline-block">
+                                <span class="relative text-white">Developer</span>
+                            </span>
+                        </blockquote>
+                    </div>
+                    <div class="pt-10">
+                        <a href="https://wa.link/pcx8nl" target="_blank" class="text-sm font-semibold text-white bg-black py-3 px-8 rounded-md hover:bg-black/90 hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out">Hubungi saya</a>
+                    </div>
+                </div>
+                <div class="">
+                    <img src="assets/img/Irfan.png" class="" alt="sparkle" width="300">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+        <!-- w1/2 bikin kesamping -->
+
+    <!-- About Section Start -->
+    <section id="about" class="pt-36 pb-32">
+        <div class="container">
+            <div class="flex flex-wrap justify-evenly text-justify">
+                <div class="w-full px-4 mb-10 lg:w-2/5">
+                    <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
+                    <h2 class="font-bold text-black text-3xl mb-5 max-w-md lg:text-4xl">RPG n Chill</h2>
+                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Saya seseorang yang suka bermain game santai, terutama game RPG. Terkadang saya juga memainkan game fps. Tapi seringkali, saya menghabiskan waktu untuk tidur.</p>
+                </div>
+                <div class="w-full px-4 lg:w-2/5"> 
+                    <h3 class="font-semibold text-black text-2xl mb-4 max-w-md lg:text-3xl lg:pt-10">Mari berteman</h3>
+                    <p class="font-medium text-base text-secondary mb-6 max-w-xl lg:text-lg">Ada orang yang bilang, "teman yang menemani dalam kesulitan adalah teman sejati". Aku setuju, tapi bagiku, teman dari dunia maya juga bisa jadi teman sejati. Jadi, mari berteman!</p>
+                    <div class="flex items-center">
+                        <!-- Youtube -->
+                        <a href="https://www.youtube.com/@Arishvel" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20"  class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/nxtirfan" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20"  class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/arishuvel" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20"  class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Program Section Start -->
+    <section id="program" class="pt-24 pb-16 bg-slate-100">
+      <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-10">
+                    <h4 class="font-semibold text-lg text-primary mb-2">Program</h4>
+                    <h2 class="font-bold text-black text-3xl mb-4">Project Terbaru</h2>
+                    <p class="font-medium text-md text-secondary">Berikut adalah beberapa projek dan program yang telah saya buat dan kerjakan selama ini.</p>
+                </div>
+            </div>
+            
+        <div class="mb-12">
+            <div class="w-full px-4 flex flex-wrap justify-center">
+                    <!-- Kalkulator -->
+                    <div class="flex justify-center rounded-md shadows-md p-2">
+                        <a href="kalkulator.php" target="_blank" class="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-primary hover:ring-primary">
+                            <div class="flex items-center space-x-3">
+                                <svg fill="#000000" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-black group-hover:fill-white"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM440.2 765h-50.8c-2.2 0-4.5-1.1-5.9-2.9L348 718.6l-35.5 43.5a7.38 7.38 0 0 1-5.9 2.9h-50.8c-6.6 0-10.2-7.9-5.8-13.1l62.7-76.8-61.2-74.9c-4.3-5.2-.7-13.1 5.9-13.1h50.9c2.2 0 4.5 1.1 5.9 2.9l34 41.6 34-41.6c1.5-1.9 3.6-2.9 5.9-2.9h50.8c6.6 0 10.2 7.9 5.9 13.1L383.5 675l62.7 76.8c4.2 5.3.6 13.2-6 13.2zm7.8-382c0 2.2-1.4 4-3.2 4H376v68.7c0 1.9-1.8 3.3-4 3.3h-48c-2.2 0-4-1.4-4-3.2V387h-68.8c-1.8 0-3.2-1.8-3.2-4v-48c0-2.2 1.4-4 3.2-4H320v-68.8c0-1.8 1.8-3.2 4-3.2h48c2.2 0 4 1.4 4 3.2V331h68.7c1.9 0 3.3 1.8 3.3 4v48zm328 369c0 2.2-1.4 4-3.2 4H579.2c-1.8 0-3.2-1.8-3.2-4v-48c0-2.2 1.4-4 3.2-4h193.5c1.9 0 3.3 1.8 3.3 4v48zm0-104c0 2.2-1.4 4-3.2 4H579.2c-1.8 0-3.2-1.8-3.2-4v-48c0-2.2 1.4-4 3.2-4h193.5c1.9 0 3.3 1.8 3.3 4v48zm0-265c0 2.2-1.4 4-3.2 4H579.2c-1.8 0-3.2-1.8-3.2-4v-48c0-2.2 1.4-4 3.2-4h193.5c1.9 0 3.3 1.8 3.3 4v48z"></path> </g></svg>
+                              <h3 class="text-slate-900 group-hover:text-white text-sm font-semibold">Kalkulator</h3>
+                            </div>
+                            <p class="text-slate-500 group-hover:text-white text-sm">Program untuk melakukan operasi matematika sederhana.</p>
+                          </a>
+                    </div>
+
+                    <!-- Berat Badan -->
+                    <div class="flex justify-center rounded-md shadows-md p-2">
+                        <a href="umur_tinggi.php" target="_blank" class="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-primary hover:ring-primary">
+                            <div class="flex items-center space-x-3">
+                              <!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" class="h-6 w-6 stroke-primary group-hover:stroke-white" fill="none" viewBox="0 0 50 50"><path d="M 14 4 C 8.4886661 4 4 8.4886661 4 14 L 4 36 C 4 41.511334 8.4886661 46 14 46 L 36 46 C 41.511334 46 46 41.511334 46 36 L 46 14 C 46 8.4886661 41.511334 4 36 4 L 14 4 z M 14 6 L 36 6 C 40.430666 6 44 9.5693339 44 14 L 44 36 C 44 40.430666 40.430666 44 36 44 L 14 44 C 9.5693339 44 6 40.430666 6 36 L 6 14 C 6 9.5693339 9.5693339 6 14 6 z M 18 9 C 15.250484 9 13 11.250484 13 14 L 13 36 C 13 38.749516 15.250484 41 18 41 L 32 41 C 34.749516 41 37 38.749516 37 36 L 37 14 C 37 11.250484 34.749516 9 32 9 L 18 9 z M 18 11 L 32 11 C 33.668484 11 35 12.331516 35 14 L 35 36 C 35 37.668484 33.668484 39 32 39 L 18 39 C 16.331516 39 15 37.668484 15 36 L 15 14 C 15 12.331516 16.331516 11 18 11 z M 18 13 C 17.448 13 17 13.448 17 14 L 17 18 C 17 18.552 17.448 19 18 19 L 32 19 C 32.552 19 33 18.552 33 18 L 33 14 C 33 13.448 32.552 13 32 13 L 18 13 z M 19 21 A 2 2 0 0 0 19 25 A 2 2 0 0 0 19 21 z M 25 21 A 2 2 0 0 0 25 25 A 2 2 0 0 0 25 21 z M 31 21 A 2 2 0 0 0 31 25 A 2 2 0 0 0 31 21 z M 19 27 A 2 2 0 0 0 19 31 A 2 2 0 0 0 19 27 z M 25 27 A 2 2 0 0 0 25 31 A 2 2 0 0 0 25 27 z M 31 27 A 2 2 0 0 0 31 31 A 2 2 0 0 0 31 27 z M 19 33 C 17.895 33 17 33.895 17 35 C 17 36.105 17.895 37 19 37 L 25 37 C 26.105 37 27 36.105 27 35 C 27 33.895 26.105 33 25 33 L 19 33 z M 31 33 A 2 2 0 0 0 31 37 A 2 2 0 0 0 31 33 z"></path></svg> -->
+                              <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="h-6 w-6 fill-black group-hover:fill-white" viewBox="-61.2 -61.2 734.40 734.40" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="1.224"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M610.434,512.716l-95.988-296.691c-4.244-13.117-16.459-22.003-30.245-22.003H382.904 c8.211-13.563,13.028-29.399,13.028-46.379c0-49.586-40.346-89.933-89.933-89.933c-49.586,0-89.933,40.346-89.933,89.933 c0,16.979,4.817,32.815,13.029,46.379H127.8c-13.786,0-26.001,8.886-30.245,22.003L1.567,512.716 c-6.643,20.531,8.666,41.573,30.245,41.573h548.376C601.768,554.29,617.076,533.248,610.434,512.716z M258.452,147.643 c0-26.221,21.327-47.548,47.548-47.548c26.221,0,47.548,21.327,47.548,47.548c0,22.705-16.015,41.682-37.327,46.379H295.78 C274.467,189.326,258.452,170.348,258.452,147.643z M263.962,451.032l-27.475-52.756h-13.092v52.756h-31.83V320.978h31.83v50.208 h13.092l26.927-50.208h34.198l-35.117,62.205v0.37l37.116,67.479H263.962z M431.369,451.032h-26.557v-3.644 c0-2.726,0.178-5.45,0.178-5.45h-0.355c0,0-12.56,11.271-34.198,11.271c-33.294,0-63.85-24.912-63.85-67.479 c0-37.827,28.555-66.931,68.219-66.931c33.28,0,50.017,17.271,50.017,17.271l-15.285,23.831c0,0-13.271-11.997-31.65-11.997 c-27.282,0-38.375,17.462-38.375,36.73c0,24.75,17.092,39.472,37.294,39.472c15.27,0,26.362-9.449,26.362-9.449v-10.013h-18.365 v-27.104h46.565L431.369,451.032L431.369,451.032z"></path> </g> </g></svg>
+                              <h3 class="text-slate-900 group-hover:text-white text-sm font-semibold">Tinggi Badan dan Umur</h3>
+                            </div>
+                            <p class="text-slate-500 group-hover:text-white text-sm">Program untuk memberi tebakan yang sesuai dengan tinggi badan dan umur.</p>
+                          </a>
+                    </div>
+            </div>  
+
+            <div class="w-full px-4 flex flex-wrap justify-center">
+                    <!-- Pengulangan -->
+                    <div class="flex justify-center rounded-md shadows-md p-2">
+                        <a href="perulangan.php" target="_blank" class="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-primary hover:ring-primary">
+                            <div class="flex items-center space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" class="h-6 w-6 fill-black group-hover:fill-white" viewBox="0 -960 960 960" width="24"><path d="M204-318q-22-38-33-78t-11-82q0-134 93-228t227-94h7l-64-64 56-56 160 160-160 160-56-56 64-64h-7q-100 0-170 70.5T240-478q0 26 6 51t18 49l-60 60ZM481-40 321-200l160-160 56 56-64 64h7q100 0 170-70.5T720-482q0-26-6-51t-18-49l60-60q22 38 33 78t11 82q0 134-93 228t-227 94h-7l64 64-56 56Z"/></svg>
+                              <h3 class="text-slate-900 group-hover:text-white text-sm font-semibold">Pengulangan</h3>
+                            </div>
+                            <p class="text-slate-500 group-hover:text-white text-sm">Program yang dapat mengulang kata dengan jumlah yang diinginkan.</p>
+                          </a>
+                    </div>
+
+                    <!-- Array -->
+                    <div class="flex justify-center rounded-md shadows-md p-2">
+                        <a href="array.php" target="_blank" class="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-primary hover:ring-primary">
+                            <div class="flex items-center space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" class="h-6 w-6 fill-black group-hover:fill-white" viewBox="0 -960 960 960" width="24"><path d="M600-160v-80h120v-480H600v-80h200v640H600Zm-440 0v-640h200v80H240v480h120v80H160Z"/></svg>
+                              <h3 class="text-slate-900 group-hover:text-white text-sm font-semibold">Array</h3>
+                            </div>
+                            <p class="text-slate-500 group-hover:text-white text-sm">Program yang menunjukkan jenis-jenis array dan bentuknya dalam sebuah tabel.</p>
+                          </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- Program Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="bg-black">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-5 text-slate-300 font-medium pt-4">
+                    <h2 class="font-semibold text-sm text-white text-center">Copyright © 2024 Muhammad Irfan</h2>
+                    <h3 class="text-sm text-white text-center">Website ini dibuat seadanya dan hanya setengah hati.</h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
